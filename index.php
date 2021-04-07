@@ -1,2 +1,3 @@
 <?php
-var_dump('Hello, docker234!');
+
+echo 'front controller';
