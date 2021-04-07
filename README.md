@@ -1,8 +1,8 @@
-# Training project "CRM" with use docker and LAMP
+# Training project "CRM"
 
 ## How to install
 
-Just copy docker-compose.yml from dist example
+Just copy docker-compose.yml from example
 
     cp docker-compose.yml.back docker-compose.yml
 
