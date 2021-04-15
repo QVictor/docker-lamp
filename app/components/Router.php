@@ -32,35 +32,38 @@ class Router
         //Проверяем, есть ли запрос в routes
         foreach ($this->routes as $uriPattern => $path) {
             if (preg_match("~$uriPattern~", $uri)) {
+
+                $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
                 //Определяем контроллер и action, обрабатывающий запрос
-                $segments = explode('/', $path);
+                $segments = explode('/', $internalRoute);
 
-                $this->nameController = $this->getNameController($segments);
+                $parameters = $segments;
 
-                unset($segments[0]);
+                $this->nameController = $this->getNameController(array_shift($segments));
 
-                $actionName = $this->getActionController($segments);
+                $nameAction = $this->getActionController(array_shift($segments));
+
 
                 $this->includeFileController();
 
                 $controllerObject = new $this->nameController;
-                $result = $controllerObject->$actionName();
+                $result = call_user_func_array(array($controllerObject, $nameAction), $parameters);
+
                 if ($result != null) {
                     break;
                 }
-
             }
         }
     }
 
-    private function getNameController($segments)
+    private function getNameController($pathUrl)
     {
-        return ucfirst(array_shift($segments) . 'Controller');
+        return ucfirst($pathUrl . 'Controller');
     }
 
-    private function getActionController($segments)
+    private function getActionController($pathUrl)
     {
-        return 'action' . ucfirst(array_shift($segments));
+        return 'action' . ucfirst($pathUrl);
     }
 
     private function getPathFileController()
