@@ -47,7 +47,7 @@ class Router
                 $this->includeFileController();
 
                 $controllerObject = new $this->nameController;
-                $result = call_user_func_array(array($controllerObject, $nameAction), $parameters);
+                $result = call_user_func_array(array($controllerObject, $nameAction), $segments);
 
                 if ($result != null) {
                     break;
