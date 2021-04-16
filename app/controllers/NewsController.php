@@ -9,15 +9,15 @@ class NewsController
         $newsList = [];
         $newsList = News::getNewsList();
 
-        print_r($newsList);
+        require_once (ROOT . '/views/news/index.php');
         return true;
     }
 
-    public function actionView($category, $id)
+    public function actionView($id)
     {
-        echo 'Просмотр одной новости';
-        var_dump($category);
-        var_dump($id);
+        $news = News::getNewsItemById($id);
+
+        require_once (ROOT . '/views/news/detail.php');
         return true;
     }
 }
