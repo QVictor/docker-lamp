@@ -20,12 +20,7 @@ class News
 
     public static function getNewsList()
     {
-        $host = 'db';
-        $dbname = 'db';
-        $user = 'root';
-        $password = 'password';
-
-        $db = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+        $db = Db::getConnection();
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $newsList = array();
