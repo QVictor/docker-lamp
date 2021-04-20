@@ -1,0 +1,11 @@
+.product {
+    grid-template-areas:
+            "image image"
+            "name name"
+            "code is_new"
+            "price price";
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 150px 50px 50px 50px;
+    padding: 20px;
+}
