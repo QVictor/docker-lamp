@@ -1,9 +1,12 @@
 <?php include ROOT . '/views/layouts/main.php' ?>
-<link rel="stylesheet" href="/views/product/style.css">
-<link rel="stylesheet" href="/template/css/site.css">
+<link rel="stylesheet" href="/views/product_cart/style.css">
+
 <article id="mainArticle">
     <? foreach ($latestProducts as $product) :?>
         <div class="product">
+            <div class="image">
+                <img src="<?=$product['image']?>" alt="">
+            </div>
             <div class="code">
                 <?='код товара: ' . $product['code']?>
             </div>
@@ -12,9 +15,7 @@
                     <div>Новинка</div>
                 <?endif;?>
             </div>
-            <div class="image">
-                <img src="<?=$product['image']?>" alt="">
-            </div>
+
             <div class="name">
                 <?=$product['name']?>
             </div>

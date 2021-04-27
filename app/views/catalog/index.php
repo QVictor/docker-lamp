@@ -1,5 +1,5 @@
 <?php include ROOT . '/views/layouts/main.php' ?>
-<link rel="stylesheet" href="/template/css/site.css">
+<link rel="stylesheet" href="/views/catalog/style.css">
 <article id="mainArticle">
     <div class="cart_products">
         <? if ($productsList == []): ?>
@@ -18,9 +18,9 @@
                     <div class="image">
                         <img src="<?= $product['image'] ?>" alt="">
                     </div>
-                    <div class="name">
+                    <a class="name" href="/product/<?=$product['code']?>">
                         <?= $product['name'] ?>
-                    </div>
+                    </a>
                     <div class="price">
                         <?= $product['price'] ?> золотых
                     </div>

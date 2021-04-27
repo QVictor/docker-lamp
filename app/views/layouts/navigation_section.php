@@ -7,6 +7,11 @@ $categoriesList = $categoriesController->actionIndex();
 <nav id="mainNav">
     <a>Категории:</a>
     <? foreach ($categoriesList as $item) {?>
-        <a href="/categories/<?=$item['id']?>"><?=$item['name']?></a>
+        <p>
+            - <a href="/category/<?=$item['id']?>"
+            <?if(isset($categoryId) && $categoryId == $item['id']):?>
+                class="active"
+            <?endif;?>><?=$item['name']?></a>
+        </p>
     <?}?>
 </nav>

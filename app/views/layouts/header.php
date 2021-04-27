@@ -10,5 +10,5 @@
 </head>
 <body>
 <header id="header">
-    Header
+    <a href="/">Header</a>
 </header>

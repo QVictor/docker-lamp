@@ -1,3 +1,3 @@
-<div id="siteAds">
+<nav id="siteAds">
     Ads
-</div>
+</nav>

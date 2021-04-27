@@ -2,7 +2,7 @@
 
 class Categories
 {
-    const SHOW_BY_DEFAULT = 9;
+    const SHOW_BY_DEFAULT = 3;
 
     public static function getCategoriesList()
     {
@@ -13,11 +13,12 @@ class Categories
         return $categoryList;
     }
 
-    public static function getProductsListByCategoryId($categoryId)
+    public static function getProductsListByCategoryId($categoryId, $pageId = 1)
     {
         $db = Db::getConnection();
+        $startElement = self::SHOW_BY_DEFAULT * ($pageId - 1);
         $result = $db->query('SELECT * from product WHERE category_id = ' . $categoryId
-            . ' LIMIT ' . self::SHOW_BY_DEFAULT);
+            . ' LIMIT ' . $startElement . ' , ' . self::SHOW_BY_DEFAULT);
         $categoryList = $result->fetchAll();
         return $categoryList;
 

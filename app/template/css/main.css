@@ -10,7 +10,7 @@ body {
     margin: 0;
 }
 
-header, footer, article, nav, div {
+header, footer, article, nav{
     padding: 20px;
     background: #d7d7d7;
 }
@@ -35,4 +35,8 @@ header, footer, article, nav, div {
 
 #siteAds {
     grid-area: ads;
+}
+
+.active {
+    background: thistle;
 }

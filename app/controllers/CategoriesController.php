@@ -10,4 +10,14 @@ class CategoriesController
 
         return $categoriesList;
     }
+
+    public function actionCategory($categoryId)
+    {
+        $categories = array();
+
+        $productsList = Categories::getProductsListByCategoryId($categoryId);
+
+        require_once(ROOT . '/views/catalog/index.php');
+        return true;
+    }
 }

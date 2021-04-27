@@ -1,5 +1,2 @@
 <?php include ROOT . '/views/layouts/main.php' ?>
-<article id="mainArticle">
-    main page
-</article>
-
+<? require_once(ROOT . '/views/catalog/index.php');?>
