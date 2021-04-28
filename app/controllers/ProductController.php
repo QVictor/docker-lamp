@@ -1,7 +1,5 @@
 <?php
 
-require_once ROOT . '/models/Product.php';
-
 class ProductController
 {
     public function actionView($id)

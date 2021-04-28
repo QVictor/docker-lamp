@@ -1,6 +1,4 @@
 <?php
-require_once ROOT . '/models/Product.php';
-require_once ROOT . '/controllers/CategoriesController.php';
 
 class SiteController
 {

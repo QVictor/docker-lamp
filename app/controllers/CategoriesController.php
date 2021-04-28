@@ -1,8 +1,5 @@
 <?php
 
-include_once ROOT . '/models/Categories.php';
-include_once ROOT . '/components/Pagination.php';
-
 class CategoriesController
 {
     public function actionIndex()

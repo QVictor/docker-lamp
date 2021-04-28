@@ -1,4 +1,4 @@
-<? require_once(ROOT . '/controllers/CategoriesController.php') ?>
+
 
 <?
 $categoriesController = new CategoriesController();
