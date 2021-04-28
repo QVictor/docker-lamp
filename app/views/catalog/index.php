@@ -28,4 +28,9 @@
             <? endforeach; ?>
         <? endif ?>
     </div>
+    <div class="pagination-area">
+        <? if (isset($pagination)) {
+            echo $pagination->get();
+        }?>
+    </div>
 </article>

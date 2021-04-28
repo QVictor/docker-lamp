@@ -1,6 +1,7 @@
 <?php
 
 include_once ROOT . '/models/Categories.php';
+include_once ROOT . '/components/Pagination.php';
 
 class CategoriesController
 {
@@ -14,8 +15,8 @@ class CategoriesController
     public function actionCategory($categoryId)
     {
         $categories = array();
-
         $productsList = Categories::getProductsListByCategoryId($categoryId);
+
 
         require_once(ROOT . '/views/catalog/index.php');
         return true;
