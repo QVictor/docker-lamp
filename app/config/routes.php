@@ -8,6 +8,8 @@ return array(
 
     'category/([0-9]+)' => 'categories/category/$1',
 
+    'user/register' => 'user/register',
+
     '' => 'site/index',
 
     /*'news/([a-z]+)/([0-9]+)' => 'news/view/$1/$2',

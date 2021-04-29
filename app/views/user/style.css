@@ -1,0 +1,8 @@
+.register-form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.register-form > input {
+    padding: 10px;
+}
