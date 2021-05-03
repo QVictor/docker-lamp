@@ -10,6 +10,12 @@ return array(
 
     'user/register' => 'user/register',
 
+    'cabinet' => 'cabinet/index',
+
+    'user/login' => 'user/login',
+
+    'user/logout' => 'user/logout',
+
     '' => 'site/index',
 
     /*'news/([a-z]+)/([0-9]+)' => 'news/view/$1/$2',
