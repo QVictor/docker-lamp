@@ -10,7 +10,11 @@
 </head>
 <body>
 <header id="header">
-    <a href="/cabinet/">Личный кабинет</a>
-    <a href="/user/login/">Войти</a>
-    <a href="/user/logout/">Выйти</a>
+    <a href="/basket/">Корзина</a>
+    <? if (User::isGuest()): ?>
+        <a href="/user/login/">Войти</a>
+    <? else: ?>
+        <a href="/cabinet/">Личный кабинет</a>
+        <a href="/user/logout/">Выйти</a>
+    <? endif ?>
 </header>

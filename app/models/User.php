@@ -97,4 +97,13 @@ class User
         }
         header("Location: /user/login");
     }
+
+    public static function isGuest()
+    {
+        if (!isset($_SESSION['user'])) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
