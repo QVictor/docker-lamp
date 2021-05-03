@@ -85,4 +85,4 @@ VALUES (NULL, 'Волшебная палочка 1', '1', '1', '20000', '1', 'Ol
 
 CREATE TABLE `db`.`user` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(256) NOT NULL , `email` VARCHAR(256) NOT NULL , `password` VARCHAR(256) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
-INSERT INTO `user` (`id`, `name`, `email`, `password`) VALUES (NULL, 'user1', 'test@test.ru', 'test');
+INSERT INTO `user` (`id`, `name`, `email`, `password`) VALUES (NULL, 'user1', 'test@test.ru', 'test123');

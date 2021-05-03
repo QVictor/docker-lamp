@@ -10,5 +10,7 @@
 </head>
 <body>
 <header id="header">
-    <a href="/">Header</a>
+    <a href="/cabinet/">Личный кабинет</a>
+    <a href="/user/login/">Войти</a>
+    <a href="/user/logout/">Выйти</a>
 </header>
