@@ -40,3 +40,12 @@ header, footer, article, nav{
 .active {
     background: thistle;
 }
+
+.form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.form > input {
+    padding: 10px;
+}

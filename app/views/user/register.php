@@ -14,7 +14,7 @@
             </ul>
         <?php endif; ?>
 
-        <form class="register-form" action="" method="post">
+        <form class="form" action="" method="post">
             <input type="text" name="name" value="<?=$name?>" placeholder="Имя"/>
             <input type="email" name="email" value="<?=$email?>" placeholder="E-mail"/>
             <input type="password" name="password" value="<?=$password?>"placeholder="Пароль"/>

@@ -106,4 +106,45 @@ class User
             return false;
         }
     }
+
+    public static function getUserById($id)
+    {
+        if ($id) {
+            $db = Db::getConnection();
+            $sql = 'SELECT * FROM user WHERE id = :id';
+
+            $result = $db->prepare($sql);
+            $result->bindParam(':id', $id, PDO::PARAM_INT);
+            $result->execute();
+
+            return $result->fetch();
+        }
+    }
+
+    /**
+     * Изменить имя и пароль пользователя с id = $userId
+     *
+     * @param $userId
+     * @param $newName
+     * @param $newPassword
+     * @return bool
+     */
+    public static function edit($userId, $newName, $newPassword)
+    {
+        if ($userId) {
+            $db = Db::getConnection();
+
+            $sql = 'UPDATE user SET name=:name, password = :password WHERE id= :id';
+
+            $result = $db->prepare($sql);
+            $result->bindParam(':name', $newName, PDO::PARAM_STR);
+            $result->bindParam(':password', $newPassword, PDO::PARAM_STR);
+            $result->bindParam(':id', $userId, PDO::PARAM_INT);
+            $res = $result->execute();
+
+            if ($res)
+                return $userId;
+            return false;
+        }
+    }
 }
