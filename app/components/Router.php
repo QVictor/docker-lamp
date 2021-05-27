@@ -79,5 +79,6 @@ class Router
         if (file_exists($pathFileController)) {
             include_once($pathFileController);
         }
+        return true;
     }
 }

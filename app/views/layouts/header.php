@@ -11,6 +11,9 @@
 <body>
 <header id="header">
     <a href="/basket/">Корзина</a>
+    <? if(isset($_SESSION['basket'])): ?>
+    <div id="countProductInBasket"></div>
+    <?endif;?>
     <? if (User::isGuest()): ?>
         <a href="/user/login/">Войти</a>
     <? else: ?>

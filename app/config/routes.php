@@ -2,6 +2,10 @@
 
 return array(
 
+    'cart/add/([0-9]+)' => 'cart/add/$1',
+
+    'cart/getCountProductsInBasket' => 'cart/GetCountProductsInBasket',
+
     'product/([0-9]+)' => 'product/view/$1',
 
 
@@ -21,6 +25,7 @@ return array(
     'user/logout' => 'user/logout',
 
     '' => 'site/index',
+
 
     /*'news/([a-z]+)/([0-9]+)' => 'news/view/$1/$2',
     'news/([0-9]+)' => 'news/view/$1',

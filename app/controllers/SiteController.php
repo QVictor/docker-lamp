@@ -2,7 +2,7 @@
 
 class SiteController
 {
-    public function actionIndex()
+    public static function actionIndex()
     {
 
         $productsList = array();

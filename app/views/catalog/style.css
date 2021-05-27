@@ -3,9 +3,10 @@
     grid-template-areas: "code is_new"
     "image image"
     "name name"
-    "price price";
+    "price price"
+    "addToBasket addToBasket";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50px 100px 50px 50px;
+    grid-template-rows: 50px 100px 50px 50px 20px;
     padding: 20px;
     background: thistle;
 }
@@ -46,6 +47,15 @@
     text-align: center;
 }
 
+.toBasket {
+    grid-area: addToBasket;
+    text-align: center;
+}
+
+#header {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
 
 
 
