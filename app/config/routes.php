@@ -4,7 +4,7 @@ return array(
 
     'cart/add/([0-9]+)' => 'cart/add/$1',
 
-    'cart/getCountProductsInBasket' => 'cart/GetCountProductsInBasket',
+    'cart/getCountProducts' => 'cart/GetCountProducts',
 
     'product/([0-9]+)' => 'product/view/$1',
 

@@ -4,28 +4,15 @@ class CartController
 {
     public static function actionAdd($idProduct)
     {
-        if (!isset($_SESSION['basket'][$idProduct])) {
-            $_SESSION['basket'][$idProduct]['count'] = 1;
-        } else {
-            $_SESSION['basket'][$idProduct]['count']++;
-        }
-        $countProducts = self::getCountProductsInBasket();
-        echo $countProducts;
+        Cart::addProduct($idProduct);
+        echo Cart::getCountProducts();
         return true;
     }
 
-    public static function getCountProductsInBasket()
+    public static function actionGetCountProducts()
     {
-        $countProducts = 0;
-        foreach ($_SESSION['basket'] as $count) {
-            $countProducts += (int)$count['count'];
-        }
-        return $countProducts;
-    }
-
-    public static function actionGetCountProductsInBasket()
-    {
-        echo self::getCountProductsInBasket();
+        echo Cart::getCountProducts();
         return true;
     }
+
 }

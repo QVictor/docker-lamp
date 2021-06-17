@@ -23,7 +23,7 @@
 
     function getCountInBasket() {
 
-        let response = fetch('/cart/getCountProductsInBasket');
+        let response = fetch('/cart/getCountProducts');
 
         if (response.ok) {
             let json = response;
@@ -33,7 +33,7 @@
     }
 
     window.onload = async function () {
-        let response = await fetch('/cart/getCountProductsInBasket');
+        let response = await fetch('/cart/getCountProducts');
         let countInBasket = await response.text();
         document.getElementById('countProductInBasket').innerHTML = countInBasket;
     };
